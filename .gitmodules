@@ -1,0 +1,4 @@
+[submodule "Credibility-Assessment-Framework"]
+	path = Credibility-Assessment-Framework
+	url = https://github.com/virtual-vehicle/Credibility-Assessment-Framework.git
+	branch = dev

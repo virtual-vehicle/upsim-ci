@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ssv:ParameterSet xmlns:ssc="http://ssp-standard.org/SSP1/SystemStructureCommon" xmlns:ssv="http://ssp-standard.org/SSP1/SystemStructureParameterValues" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" name="mechanics" generationDateAndTime="2023-11-06T17:37:43Z" xsi:schemaLocation="http://ssp-standard.org/SSP1/SystemStructureParameterValues http://ssp-standard.org/SSP1/SSP/1.0/SystemStructureParameterValues.xsd">
+  <ssv:Parameters>
+    <ssv:Parameter name="J">
+      <ssv:Real unit="kg*m*m" value="0.002"/>
+    </ssv:Parameter>
+    <ssv:Parameter name="M_fr">
+      <ssv:Real unit="N*m" value="0.01"/>
+    </ssv:Parameter>
+    <ssv:Parameter name="M_l">
+      <ssv:Real unit="N*m" value="1.0"/>
+    </ssv:Parameter>
+    <ssv:Parameter name="d">
+      <ssv:Real unit="N*m/rad" value="0.001"/>
+    </ssv:Parameter>
+  </ssv:Parameters>
+  <ssv:Units>
+    <ssc:Unit name="kg*m*m">
+      <ssc:BaseUnit/>
+    </ssc:Unit>
+    <ssc:Unit name="N*m">
+      <ssc:BaseUnit/>
+    </ssc:Unit>
+    <ssc:Unit name="N*m/rad">
+      <ssc:BaseUnit/>
+    </ssc:Unit>
+  </ssv:Units>
+</ssv:ParameterSet>

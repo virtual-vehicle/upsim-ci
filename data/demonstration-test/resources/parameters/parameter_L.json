@@ -1,0 +1,17 @@
+{
+    "name": "electrics.L",
+    "data": {
+        "nominal": 0.001,
+        "upper": 0.0011,
+        "lower": 0.00095,
+        "unit": "H",
+        "interval": 0.00001
+    },
+    "uncertainty": {
+        "type": "range"
+    },
+    "source": {
+        "data": "provided",
+        "uncertainty": "provided"
+    }
+}

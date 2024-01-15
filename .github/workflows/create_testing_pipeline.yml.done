@@ -1,0 +1,37 @@
+name: create-pipeline
+on:
+  push:
+    # paths-ignore:
+    #   - '.github/workflows/**'
+
+jobs:
+    rw:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: checkout simulation data
+              uses: actions/checkout@v4
+              with: 
+                submodules: true
+                token: ${{ secrets.WRITE_WORKFLOW }}
+            - name: install prerequisites
+              run: |
+                cd util/stmd
+                npm install yaml
+                cd ../..
+                npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud
+            - name: create new pipeline
+              run: node ./util/stmd/parse_to_yaml.js -f "./data/demonstration-test/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
+            - name: push new test pipeline
+              # The push will NOT trigger an infinite loop, see https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+              run: |
+                git config --global user.name "Automated Test Pipeline"
+                git config --global user.email "levanthanh3005@users.noreply.github.com"
+
+                git add ./.github/workflows
+                git commit -m "Generated new automated test pipeline, based on STMD [actions skip]"
+                git push -f
+                
+            - name: display result
+              run: |
+                echo "Successfully created new test pipeline:" >> $GITHUB_STEP_SUMMARY
+                # cat ./.github/workflows/continuous_test.yml >> $GITHUB_STEP_SUMMARY

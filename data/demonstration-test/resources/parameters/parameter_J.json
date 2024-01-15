@@ -1,0 +1,18 @@
+{
+    "name": "mechanics.J",
+    "data": {
+        "nominal": 0.002,
+        "upper": 0.00204,
+        "lower": 0.00196,
+        "unit": "kg*m^2",
+        "interval": 0.000001
+    },
+    "uncertainty": {
+        "type": "truncated normal",
+        "standardDeviation": 0.00002
+    },
+    "source": {
+        "data": "measured",
+        "uncertainty": "measured"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": 5,
+    "description": "The electrical submodel is allowed to have further inputs and outputs, if necessary.",
+    "type": "info",
+    "category": "model",
+    "customer": "UPSIM Demo",
+    "creator": "Maurizio.Ahmann@setlabs.de",
+    "owner": "Maurizio.Ahmann@setlabs.de",
+    "signee": "VanThanh.Le@setlabs.de",
+    "status": {
+        "state": "Created",
+        "date": "2022-09-16T14:22:00Z"
+    },
+    "version": "1.0"
+}

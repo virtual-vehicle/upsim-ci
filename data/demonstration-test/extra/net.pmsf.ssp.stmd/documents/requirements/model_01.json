@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "description": "The model of the DC-Motor must contain at least two submodels: A submodel for the electro-magnetic part (further referenced as electrical submodel) and a submodel for the mechanical part (further referenced as mechanical submodel).",
+    "type": "functional",
+    "category": "model",
+    "customer": "UPSIM Demo",
+    "creator": "Maurizio.Ahmann@setlabs.de",
+    "owner": "Maurizio.Ahmann@setlabs.de",
+    "signee": "VanThanh.Le@setlabs.de",
+    "status": {
+        "state": "Created",
+        "date": "2022-09-16T14:29:00Z"
+    },
+    "version": "1.0"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "electrics.R",
+    "data": {
+        "nominal": 0.2,
+        "upper": 0.288,
+        "lower": 0.19,
+        "unit": "Ohm",
+        "interval": 0.001
+    },
+    "uncertainty": {
+        "type": "range"
+    },
+    "source": {
+        "data": "provided",
+        "uncertainty": "provided"
+    }
+}

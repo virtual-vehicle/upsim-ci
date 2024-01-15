@@ -1,0 +1,17 @@
+{
+    "name": "mechanics.M_l",
+    "data": {
+        "nominal": 1.0,
+        "upper": 2.0,
+        "lower": -2.0,
+        "unit": "N*m",
+        "interval": 0.01
+    },
+    "uncertainty": {
+        "type": "range"
+    },
+    "source": {
+        "data": "provided",
+        "uncertainty": "estimated"
+    }
+}

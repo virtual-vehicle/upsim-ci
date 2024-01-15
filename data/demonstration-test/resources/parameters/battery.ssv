@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ssv:ParameterSet xmlns:ssc="http://ssp-standard.org/SSP1/SystemStructureCommon" xmlns:ssv="http://ssp-standard.org/SSP1/SystemStructureParameterValues" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" name="battery" generationDateAndTime="2023-11-06T17:37:43Z" xsi:schemaLocation="http://ssp-standard.org/SSP1/SystemStructureParameterValues http://ssp-standard.org/SSP1/SSP/1.0/SystemStructureParameterValues.xsd">
+  <ssv:Parameters>
+    <ssv:Parameter name="U_bat">
+      <ssv:Real unit="V" value="48.0"/>
+    </ssv:Parameter>
+  </ssv:Parameters>
+  <ssv:Units>
+    <ssc:Unit name="V">
+      <ssc:BaseUnit kg="1" m="2" s="-3" A="-1"/>
+    </ssc:Unit>
+  </ssv:Units>
+</ssv:ParameterSet>

@@ -1,0 +1,15 @@
+{
+    "id": 8,
+    "description": "The mechanical submodel must model the kinematics of the DC-Motor with part number XY12346.",
+    "type": "functional",
+    "category": "model",
+    "customer": "UPSIM Demo",
+    "creator": "Maurizio.Ahmann@setlabs.de",
+    "owner": "Maurizio.Ahmann@setlabs.de",
+    "signee": "VanThanh.Le@setlabs.de",
+    "status": {
+        "state": "Created",
+        "date": "2022-09-19T07:40:00Z"
+    },
+    "version": "1.0"
+}

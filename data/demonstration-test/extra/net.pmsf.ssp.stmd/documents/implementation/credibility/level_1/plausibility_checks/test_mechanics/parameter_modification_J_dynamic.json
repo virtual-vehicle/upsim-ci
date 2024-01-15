@@ -1,0 +1,21 @@
+{
+    "model_source": "./systems/J_increased.ssd",
+    "modified_parameter": {
+        "name": "J",
+        "model_reference": "mechanics",
+        "action": "increase",
+        "modification": {
+            "value": 0.001,
+            "unit": "kg*m^2"
+        }
+    },
+    "influenced_variable": {
+        "name": "w",
+        "model_reference": "mechanics",
+        "expectation": "<",
+        "timepoints_to_check": {
+            "start": 0.5
+        },
+        "comparison": "absolute"
+    }
+}
