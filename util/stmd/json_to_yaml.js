@@ -159,7 +159,7 @@ function allToYaml(actionList) {
         if (typeof actionList[e] === "string") {
             var fileName = actionList[e].replaceAll("_",".");
             allJson["jobs"][actionList[e]] = {
-                "uses": "virtual-vehicle/upsim-ci/.github/workflows/"+fileName+".yaml@main",
+                "uses": "virtual-vehicle/upsim-ci/.github/workflows/"+fileName+".yaml@master",
                 "secrets" : {
                     "WRITE_WORKFLOW" : "${{secrets.WRITE_WORKFLOW}}"
                 }

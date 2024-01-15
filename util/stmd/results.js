@@ -75,7 +75,6 @@ if (isSinglePhase == true) {
             if (minLevel < reportByPhase[phaseName]["reachedLevel"]) {
                 reportByPhase[phaseName]["reachedLevel"] = minLevel;
             }
-            // https://github.com/virtual-vehicle/upsim-ci/actions/workflows/No.0.RequirementsPhase.DefineModelRequirements.yaml
             let fileName = actionList[a].replaceAll("_",".");
             let fileURL = "https://github.com/virtual-vehicle/upsim-ci/blob/main/.github/outputs/"+fileName+".json";
 
