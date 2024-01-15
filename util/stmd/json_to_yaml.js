@@ -94,17 +94,6 @@ function jsonToYaml(cdkElements, outputFile, basename, stmdFolderPath) {
         run: "cat " + outputFile
     });
 
-    // add summary step
-    // yaml_struct.jobs[basename].steps.push({
-    //     name: "test report",
-    //     run: "cat " + outputFile + " >> $GITHUB_STEP_SUMMARY && cat " + outputFile +""
-    // });
-
-    // yaml_struct.jobs[basename].steps.push({
-    //     name: "push results",
-    //     run: "git config --global user.name \"levanthanh3005\" && git config --global user.email \"levanthanh3005@users.noreply.github.com\" && git pull origin main && cp "+outputFile+" ./.github/ && git add ./.github/"+outputFile+" && git commit -m \"add results "+outputFile+" [actions skip]\" -a && git push"
-    // });
-
     yaml_struct.jobs[basename].steps.push({
         name: "send to outputs",
         id: "outputStep",
@@ -135,18 +124,11 @@ function allToYaml(actionList) {
             }
         },
         "jobs": {
-            // "No_0_RequirementsPhase_DefineModelRequirements": {
-            //     "uses": "levanthanh3005/upsim-ci-2/.github/workflows/No.0.RequirementsPhase.DefineModelRequirements.yaml@main"
-            // },
             "all": {
                 "runs-on": "ubuntu-20.04",
                 "needs": [
-                    // "No_0_RequirementsPhase_DefineModelRequirements"
                 ],
                 "steps": [
-                    // {
-                    // "run": "rs=\"${{needs.No_0_RequirementsPhase_DefineModelRequirements.outputs.summary}}\"\necho $rs > all.txt\ncat all.txt > $GITHUB_STEP_SUMMARY\necho \"----\"\n# echo [${{needs.No_1_RequirementsPhase_DefineParameterRequirements.outputs}}]\n"
-                    // }
                     {
                         "name": "checkout simulation data",
                         "uses": "actions/checkout@v4",
@@ -177,7 +159,7 @@ function allToYaml(actionList) {
         if (typeof actionList[e] === "string") {
             var fileName = actionList[e].replaceAll("_",".");
             allJson["jobs"][actionList[e]] = {
-                "uses": "levanthanh3005/upsim-ci-2/.github/workflows/"+fileName+".yaml@main",
+                "uses": "virtual-vehicle/upsim-ci/.github/workflows/"+fileName+".yaml@main",
                 "secrets" : {
                     "WRITE_WORKFLOW" : "${{secrets.WRITE_WORKFLOW}}"
                 }
@@ -200,7 +182,7 @@ function allToYaml(actionList) {
 
     allJson["jobs"]["all"]["steps"].push({
         "name": "push new test pipeline",
-        "run": "git config --global user.name \"Add results\"\ngit config --global user.email \"levanthanh3005@users.noreply.github.com\"\n\ngit add ./.github/outputs\ngit commit -m \"Add results [actions skip]\"\ngit push\n"
+        "run": "git config --global user.name \"Add results\"\ngit config --global user.email \"setlabs@users.noreply.github.com\"\n\ngit add ./.github/outputs\ngit commit -m \"Add results [actions skip]\"\ngit push\n"
     });
 
     let yaml_string = yaml.stringify(allJson);

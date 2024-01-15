@@ -75,9 +75,9 @@ if (isSinglePhase == true) {
             if (minLevel < reportByPhase[phaseName]["reachedLevel"]) {
                 reportByPhase[phaseName]["reachedLevel"] = minLevel;
             }
-            // https://github.com/levanthanh3005/upsim-ci-2/actions/workflows/No.0.RequirementsPhase.DefineModelRequirements.yaml
+            // https://github.com/virtual-vehicle/upsim-ci/actions/workflows/No.0.RequirementsPhase.DefineModelRequirements.yaml
             let fileName = actionList[a].replaceAll("_",".");
-            let fileURL = "https://github.com/levanthanh3005/upsim-ci-2/blob/main/.github/outputs/"+fileName+".json";
+            let fileURL = "https://github.com/virtual-vehicle/upsim-ci/blob/main/.github/outputs/"+fileName+".json";
 
             valueOutput += "| "+phaseName+" | "+stepName+" | "+passedCount+"/"+ rs.length + "|" + minLevel +" | [view]("+fileURL+") | \n"
 

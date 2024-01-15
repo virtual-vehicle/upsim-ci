@@ -25,7 +25,7 @@ jobs:
               # The push will NOT trigger an infinite loop, see https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
               run: |
                 git config --global user.name "Automated Test Pipeline"
-                git config --global user.email "levanthanh3005@users.noreply.github.com"
+                git config --global user.email "setlabs@users.noreply.github.com"
 
                 git add ./.github/workflows
                 git commit -m "Generated new automated test pipeline, based on STMD [actions skip]"
