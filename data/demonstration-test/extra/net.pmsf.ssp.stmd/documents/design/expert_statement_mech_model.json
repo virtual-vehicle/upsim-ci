@@ -1,6 +1,0 @@
-{
-    "content":"ASSUMPTIONS: The model will be used according to the investigation described in the Analysis Phase. CONSTRAINTS: The model shall be used only to investigate the rotational velocity of the rotor and only within the given range (see integration requirements ID 23, 24, 25) JUSTIFICATIONS: The model was built using a second order ODE with respect to the position of the rotor. The load is modelled as a constant torque (see test case requirement ID 17). The brush friction (see model requirement 10) is modelled as a constant value, according to the data sheet and as the friction and stiction can be modelled as the same value (see parameter requirement ID 20), the brush friction is modelled as a constant load torque.",
-    "signature":"43e15bca7dac651e501e8c07991ce83ff5f32c6cbf7a03bd8264c7ce490e8192b550fd27d8053d24686bdc670a59cdd5f677cc7c346e7e46d79c56803a521030fca94986fb9fa3c768327a6838e03b92c62cc2d34cfd3e6286a4499eb54ab50a3559395b9565c994247158acabaf8f52c99bddd75699cc959020c66bcb2435bedd1702bc737eeeffd70376fa2cc8741877cc9d6a02f42f1b18f90562419eb1e9d18f1666a43d22a49903978bac899c6cffbb50d282ae9762bbaf282886009b9c20e952151d38709cfc8bf006e5455e7a9592d697747f572037b6fec669bb3bfd220e76346ff1c78ba2ced75a2d3e2e4fb9d39091c2fd16d57e0bb64bc6e973e6",
-    "hash_algorithm":"SHA256",
-    "signature_encoding":"hex"
-}

@@ -1,9 +1,0 @@
-{
-    "content": {
-        "result": true,
-        "log": "The requirement with ID #req_model_01 is necessary, unambiguous, complete, singular, achievable, and verifiable."
-    },
-    "signature": "1e83a4460b729adf522889b21f8ae2031cfa13c16fd777b7421264beb3cc8310d8f9308946ff7cd736624a87d6145de8780a9cf70206f05d33367748453bfd6adebd3c56edda74235e7e2b843a7a5efdf0e448aad3a6e45af7c3e7f844f9ac2570872abfdef2cc0027d987dacf940f908d928178af6afe95dc5513db7298273e1a216504f135f021883a882c0bff9e70b1ef278f4d921e57b7a05ee5a97e40685de42b50f06bba3f6a84ba06881ded874055fceedd525f13cc450fdcfc7f22c9e585ebbe3214904cca22edb9d677243567b0b76da1fbaaeb86d252ee817085c3afbcbfa6af45317f7522fc980bebacdfe2b2d4039824e7cd56c943cd467737f2",
-    "hash_algorithm": "SHA256",
-    "signature_encoding": "hex"
-}
