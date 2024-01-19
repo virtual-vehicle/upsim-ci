@@ -1,0 +1,6 @@
+{
+    "samples_aleatory": 20,
+    "samples_epistemic": 10,
+    "method_aleatory": "equally_spaced",
+    "method_epistemic": "equally_spaced"
+}

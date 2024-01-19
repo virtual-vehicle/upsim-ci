@@ -1,0 +1,17 @@
+{
+    "name": "U_bat",
+    "data": {
+        "nominal": 48.0,
+        "upper": 48.0,
+        "lower": -48.0,
+        "unit": "V",
+        "interval": 0.1
+    },
+    "uncertainty": {
+        "type": "range"
+    },
+    "source": {
+        "data": "provided",
+        "uncertainty": "estimated"
+    }
+}

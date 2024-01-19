@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ssd:SystemStructureDescription xmlns:ssc="http://ssp-standard.org/SSP1/SystemStructureCommon" xmlns:ssd="http://ssp-standard.org/SSP1/SystemStructureDescription" xmlns:ssb="http://ssp-standard.org/SSP1/SystemStructureSignalDictionary" xmlns:ssv="http://ssp-standard.org/SSP1/SystemStructureParameterValues" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" name="dc_motor" generationDateAndTime="2023-11-06T17:37:43Z" xsi:schemaLocation="http://ssp-standard.org/SSP1/SystemStructureDescription http://ssp-standard.org/SSP1/SSP/1.0/SystemStructureDescription.xsd">
+  <ssd:System name="Model.CONNECT 1">
+    <ssd:Elements>
+      <ssd:Component name="battery" type="application/x-fmu-sharedlibrary" source="../../../../../../resources/models/battery.fmu">
+        <ssd:Connectors>
+          <ssd:Connector name="U_suppl" kind="output">
+            <ssc:Real unit="V"/>
+          </ssd:Connector>
+        </ssd:Connectors>
+        <ssd:ParameterBindings>
+          <ssd:ParameterBinding type="application/x-ssp-parameter-set" source="../../../../../../resources/parameters/battery.ssv"/>
+        </ssd:ParameterBindings>
+      </ssd:Component>
+      <ssd:Component name="electrics" type="application/x-fmu-sharedlibrary" source="../../../../../../resources/models/electrics.fmu">
+        <ssd:Connectors>
+          <ssd:Connector name="U_suppl" kind="input">
+            <ssc:Real unit="V"/>
+          </ssd:Connector>
+          <ssd:Connector name="w" kind="input">
+            <ssc:Real unit="rad/s"/>
+          </ssd:Connector>
+          <ssd:Connector name="M_el" kind="output">
+            <ssc:Real/>
+          </ssd:Connector>
+        </ssd:Connectors>
+        <ssd:ParameterBindings>
+          <ssd:ParameterBinding type="application/x-ssp-parameter-set" source="../../../../../../resources/parameters/electrics.ssv"/>
+        </ssd:ParameterBindings>
+      </ssd:Component>
+      <ssd:Component name="mechanics" type="application/x-fmu-sharedlibrary" source="../../../../../../resources/models/mechanics.fmu">
+        <ssd:Connectors>
+          <ssd:Connector name="M_el" kind="input">
+            <ssc:Real/>
+          </ssd:Connector>
+          <ssd:Connector name="w" kind="output">
+            <ssc:Real unit="rad/s"/>
+          </ssd:Connector>
+        </ssd:Connectors>
+        <ssd:ParameterBindings>
+          <ssd:ParameterBinding type="application/x-ssp-parameter-set" source="../../../../../../resources/parameters/mechanics.ssv"/>
+        </ssd:ParameterBindings>
+      </ssd:Component>
+    </ssd:Elements>
+    <ssd:Connections>
+      <ssd:Connection startElement="battery" startConnector="U_suppl" endElement="electrics" endConnector="U_suppl">
+      </ssd:Connection>
+      <ssd:Connection startElement="electrics" startConnector="M_el" endElement="mechanics" endConnector="M_el">
+      </ssd:Connection>
+      <ssd:Connection startElement="mechanics" startConnector="w" endElement="electrics" endConnector="w">
+      </ssd:Connection>
+    </ssd:Connections>
+  </ssd:System>
+  <ssd:Units>
+    <ssc:Unit name="V">
+      <ssc:BaseUnit kg="1" m="2" s="-3" A="-1"/>
+    </ssc:Unit>
+    <ssc:Unit name="rad/s">
+      <ssc:BaseUnit s="-1" rad="1"/>
+    </ssc:Unit>
+  </ssd:Units>
+  <ssd:DefaultExperiment startTime="0.0" stopTime="2.0">
+    <ssd:Annotations>
+        <!-- additional OpenMCx specific simulation parameters -->
+        <ssc:Annotation type="com.avl.model.connect.ssp.task"
+                        xmlns:mc="com.avl.model.connect.ssp.task">
+            <!-- sequential execution of component steps -->
+            <!-- synchronization time step size of 0.001 -->
+            <!-- simulation will end when the stopTime is reached -->
+            <mc:Task stepType="sequential" deltaTime="0.01" endType="end_time"/>
+        </ssc:Annotation>
+    </ssd:Annotations>
+  </ssd:DefaultExperiment>
+</ssd:SystemStructureDescription>

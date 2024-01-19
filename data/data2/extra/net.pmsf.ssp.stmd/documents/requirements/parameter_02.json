@@ -1,0 +1,15 @@
+{
+    "id": 19,
+    "description": "For the evaluation of the simulation, the parameter values for 0 minutes of operation, as well as the parameter values for 20 minutes operation must be taken into account.",
+    "type": "functional",
+    "category": "parameter",
+    "customer": "UPSIM Demo",
+    "creator": "Maurizio.Ahmann@setlabs.de",
+    "owner": "Maurizio.Ahmann@setlabs.de",
+    "signee": "VanThanh.Le@setlabs.de",
+    "status": {
+        "state": "Created",
+        "date": "2022-09-19T08:57:00Z"
+    },
+    "version": "1.0"
+}

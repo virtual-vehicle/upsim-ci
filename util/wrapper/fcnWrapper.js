@@ -27,5 +27,8 @@ exports.wrapper = (packageUri, functionToRun, argTypes, args, metadata) => {
     if (metadata) {
         rs = {...rs, ...metadata}
     }
+    if (typeof rs == "object") {
+        rs = JSON.stringify(rs);
+    }
     return rs;
 }

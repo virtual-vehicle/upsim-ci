@@ -1,0 +1,17 @@
+{
+    "name": "M_fr",
+    "data": {
+        "nominal": 0.10,
+        "upper": 0.12,
+        "lower": 0.09,
+        "unit": "N*m",
+        "interval": 0.001
+    },
+    "uncertainty": {
+        "type": "range"
+    },
+    "source": {
+        "data": "provided",
+        "uncertainty": "provided"
+    }
+}

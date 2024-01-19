@@ -34,7 +34,7 @@ var count = 0;
 var workflowNameList = [];
 
 for (let r of lsRationale) {
-    // if (count < 2 ) {
+    // if (count == 13) {
         let fileName = r[1].split(":")[1]+"."+r[2].split(":")[1];
         let workflowName = "No_"+count+"_"+fileName.replace(".","_");
         workflowNameList.push(workflowName);

@@ -151,7 +151,11 @@ function allToYaml(actionList) {
     }
 
     var step1 = {
-        "env" : {},
+        "env" : {
+            "GithubBranch": "${{github.ref_name}}",
+            "GithubRepoName": "${{github.event.repository.name}}",
+            "GithubOwner": "${{github.repository_owner}}"
+        },
         "run" : "node ./util/stmd/results.js -s -o summary.md && cat summary.md >> $GITHUB_STEP_SUMMARY"
     }
     var allActionList = "";
@@ -159,7 +163,7 @@ function allToYaml(actionList) {
         if (typeof actionList[e] === "string") {
             var fileName = actionList[e].replaceAll("_",".");
             allJson["jobs"][actionList[e]] = {
-                "uses": "virtual-vehicle/upsim-ci/.github/workflows/"+fileName+".yaml@master",
+                "uses": process.env.GithubOwner+"/"+process.env.GithubRepoName+"/.github/workflows/"+fileName+".yaml@"+process.env.GithubBranch,
                 "secrets" : {
                     "WRITE_WORKFLOW" : "${{secrets.WRITE_WORKFLOW}}"
                 }
@@ -203,16 +207,15 @@ function translateProcessingElement(element, stmdFolderPath) {
             run: prerequisite.attributes.method == "nodejs" ? "node " + absolutePathSource : "chmod +x " +absolutePathSource+" && "+absolutePathSource
         });
     }
-
+    
     if (element.SimpleProcessing !== undefined) {
         // parse arguments
         let functionMethods = [];
         let functionArgs = [];
-
         for (let arg of element.Inputs.FunctionArgument) {
             functionMethods.push('"' + arg.attributes.method + '"');
             if (arg.attributes.method == "file") {
-                functionArgs.push('"' + arg.attributes.source + '"');
+                functionArgs.push('"' + arg.attributes.content + '"');
             } else if (arg.attributes.method == "path") {
                 functionArgs.push('"' + path.resolve(stmdFolderPath,arg.attributes.content) + '"');
             } else {
@@ -265,23 +268,54 @@ function translateProcessingElement(element, stmdFolderPath) {
 
             for (let arg of element.Inputs.CommandLineArgument) {
                 clArgs.push(arg.attributes.flag);
-                if (arg.attributes.argument !== undefined)
-                    clArgs.push(arg.attributes.argument) ;
-                if (arg.attributes.path !== undefined)
-                    clArgs.push(path.resolve(stmdFolderPath, arg.attributes.path)) ;
+                if (arg.attributes.argument !== undefined) {
+                    if (arg.attributes.type == "path") {
+                        var argPathLs = arg.attributes.argument.split(" ");
+                        for (var argi in argPathLs) {
+                            if (typeof argPathLs[argi] === "string") {
+                                var argPath = path.resolve(stmdFolderPath, argPathLs[argi]);
+                                var argFolderPath = path.dirname(argPath);
+                                
+                                if (!fs.existsSync(argFolderPath)){
+                                    fs.mkdirSync(argFolderPath, { recursive: true });
+                                }
+                                
+                                clArgs.push(argPath) ;
+                            }
+                        }
+                    } else {
+                        clArgs.push(arg.attributes.argument); 
+                    }
+                }
+                //     clArgs.push(arg.attributes.argument) ;
+                // if (arg.attributes.path !== undefined)
+                //     clArgs.push(path.resolve(stmdFolderPath, arg.attributes.path)) ;
             }
 
-            var outputPath = path.resolve(stmdFolderPath,element.Outputs.Output[0].attributes.path)
-            var outputFolderPath = path.dirname(outputPath);
-    
-            // if (!fs.existsSync(outputFolderPath)){
-            //     fs.mkdirSync(outputFolderPath, { recursive: true });
-            // }
+            var outputPath;
+            try {
+                var outputPath = path.resolve(stmdFolderPath,element.Outputs.Output[0].attributes.path)
+            }catch(e)  {
+                outputPath = "";
+            }
 
-            steps.push({
-                name: element.attributes.description.slice(0, 60) + "...",
-                run: "rs=$(node " + path.resolve(stmdFolderPath, element.ComplexProcessing.attributes.source) + " " + clArgs.join(" ") + ") && echo $rs && mkdir -p "+outputFolderPath+" &&  echo $rs > " + outputPath
-            });
+            if (outputPath) {
+                var outputFolderPath = path.dirname(outputPath);
+        
+                // if (!fs.existsSync(outputFolderPath)){
+                //     fs.mkdirSync(outputFolderPath, { recursive: true });
+                // }
+
+                steps.push({
+                    name: element.attributes.description.slice(0, 60) + "...",
+                    run: "rs=$(node " + path.resolve(stmdFolderPath, element.ComplexProcessing.attributes.source) + " " + clArgs.join(" ") + ") && echo $rs && mkdir -p "+outputFolderPath+" &&  echo $rs > " + outputPath
+                });
+            } else {
+                steps.push({
+                    name: element.attributes.description.slice(0, 60) + "...",
+                    run: "node " + path.resolve(stmdFolderPath, element.ComplexProcessing.attributes.source) + " " + clArgs.join(" ") + ""
+                });
+            }
         }
     }
 
@@ -306,7 +340,7 @@ function translateEvidenceElement(element, outputPath, stmdFolderPath) {
             for (let arg of test.FunctionArgument) {
                 functionMethods.push('"' + arg.attributes.method + '"');
                 if (arg.attributes.method == "file") {
-                    functionArgs.push('"' + arg.attributes.source + '"');
+                    functionArgs.push('"' + arg.attributes.content + '"');
                 } else  if (arg.attributes.method == "path") {
                     functionArgs.push('"' + path.resolve(stmdFolderPath, arg.attributes.content) + '"');
                 } else {

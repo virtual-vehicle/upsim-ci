@@ -3011,7 +3011,8 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             <cdk:Inputs>
                                 <cdk:CommandLineArgument 
                                     flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3043,8 +3044,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
                                 <cdk:CommandLineArgument 
-                                    flag="-i" 
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
+                                    flag="-i"
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3077,7 +3079,8 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             <cdk:Inputs>
                                 <cdk:CommandLineArgument 
                                     flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3110,7 +3113,8 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             <cdk:Inputs>
                                 <cdk:CommandLineArgument 
                                     flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3127,9 +3131,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument
+                                <cdk:CommandLineArgument 
                                     flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3160,8 +3165,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
+                                <cdk:CommandLineArgument 
+                                    flag="-i"
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3192,8 +3199,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
+                                <cdk:CommandLineArgument 
+                                    flag="-i"
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3224,8 +3233,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
+                                <cdk:CommandLineArgument 
+                                    flag="-i"
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 
@@ -3256,8 +3267,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument flag="-i"
-                                    path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
+                                <cdk:CommandLineArgument 
+                                    flag="-i"
+                                    type="path"
+                                    argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
                                 <cdk:Output 

@@ -20,7 +20,12 @@ jobs:
                 cd ../..
                 npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud
             - name: create new pipeline
-              run: node ./util/stmd/parse_to_yaml.js -f "./data/demonstration-test/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
+              env:          
+                GithubBranch: ${{ github.ref_name }}
+                GithubRepoName: ${{ github.event.repository.name }}
+                GithubOwner: ${{ github.repository_owner }}
+              run: node ./util/stmd/parse_to_yaml.js -f "./data/data2/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
+              # run: node ./util/stmd/parse_to_yaml.js -f "./data/demonstration-test/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
             - name: push new test pipeline
               # The push will NOT trigger an infinite loop, see https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
               run: |

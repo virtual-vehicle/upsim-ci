@@ -1,0 +1,21 @@
+{
+    "model_source": "./systems/R_increased.ssd",
+    "modified_parameter": {
+        "name": "R",
+        "model_reference": "electrics",
+        "action": "increase",
+        "modification": {
+            "value": 0.2,
+            "unit": "Ohm"
+        }
+    },
+    "influenced_variable": {
+        "name": "M_el",
+        "model_reference": "electrics",
+        "expectation": "<",
+        "timepoints_to_check": {
+            "start": 1.0
+        },
+        "comparison": "absolute"
+    }
+}

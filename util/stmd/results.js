@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path')
 
-// node ./util/stmd/parse_to_yaml.js -f "./data/demonstration-test/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows/
-
 let isSinglePhase = false;
 let value;
 let outputFilePath;
@@ -41,13 +39,10 @@ if (isSinglePhase == true) {
     valueOutput.push(value);
     fs.writeFileSync(outputFilePath, JSON.stringify(valueOutput))
 } else {
-    // valueOutput = {...valueOutput, ...value}
     valueOutput = "### CDK Report :rocket: \n| Phase | Step | Test passed | Reached Level | Result | \n | ---- | ---- | ---- | ---- | ---- | \n"
     let allActionList = process.env.allActionList;
-    console.log(allActionList)
-    // console.log(JSON.stringify(process.env, null, 4))
+    
     let actionList = allActionList.split(",");
-    // const fileList = fs.readdirSync(folderPath)
     let reportByPhase = {};
 
     for (let a in actionList) {
@@ -62,25 +57,27 @@ if (isSinglePhase == true) {
             let stepName = actionList[a].split("_")[3];
             let rs = JSON.parse(process.env[actionList[a]]);
             let passedCount = 0;
-
+            let rsFullObj = [];
             let minLevel = 3;
             for (let e in rs) {
-                if (rs[e]["result"] == true) {
+                var rsobj = JSON.parse(rs[e]);
+                if (rsobj["result"] == true) {
                     passedCount ++;
-                } else if (parseInt(rs[e]["level"]) <= minLevel) {
-                    minLevel = parseInt(rs[e]["level"]) - 1;
+                } else if (parseInt(rsobj["level"]) <= minLevel) {
+                    minLevel = parseInt(rsobj["level"]) - 1;
                 }
+                rsFullObj.push(rsobj);
             }
 
             if (minLevel < reportByPhase[phaseName]["reachedLevel"]) {
                 reportByPhase[phaseName]["reachedLevel"] = minLevel;
             }
             let fileName = actionList[a].replaceAll("_",".");
-            let fileURL = "https://github.com/virtual-vehicle/upsim-ci/blob/main/.github/outputs/"+fileName+".json";
+            let fileURL = "https://github.com/"+process.env.GithubOwner+"/"+process.env.GithubRepoName+"/blob/"+process.env.GithubBranch+"/.github/outputs/"+fileName+".json";
 
             valueOutput += "| "+phaseName+" | "+stepName+" | "+passedCount+"/"+ rs.length + "|" + minLevel +" | [view]("+fileURL+") | \n"
 
-            fs.writeFileSync("./.github/outputs/"+fileName+".json", process.env[actionList[a]]);
+            fs.writeFileSync("./.github/outputs/"+fileName+".json", JSON.stringify(rsFullObj, null, 4));
         }
     }
 
@@ -90,6 +87,5 @@ if (isSinglePhase == true) {
     }
 
     fs.writeFileSync(outputFilePath, valueOutput)
-    // node ./util/stmd/results.js -s ./.github/outputs -o summary.md
 }
 
