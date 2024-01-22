@@ -21,7 +21,7 @@ jobs:
                 GithubBranch: ${{ github.ref_name }}
                 GithubRepoName: ${{ github.event.repository.name }}
                 GithubOwner: ${{ github.repository_owner }}
-              run: node ./util/stmd/parse_to_yaml.js -f "./data/dc.motor/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
+              run: node ./util/stmd/parse_to_yaml.js -f "./data/dc-motor/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
             - name: push workflows
               run: |
                 git config --global user.name "Automated Test Pipeline"
