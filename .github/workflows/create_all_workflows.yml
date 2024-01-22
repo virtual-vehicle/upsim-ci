@@ -1,9 +1,6 @@
-name: create-pipeline
+name: create-workflows
 on:
   push:
-    # paths-ignore:
-    #   - '.github/workflows/**'
-
 jobs:
     rw:
         runs-on: ubuntu-20.04
@@ -19,24 +16,22 @@ jobs:
                 npm install yaml
                 cd ../..
                 npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud
-            - name: create new pipeline
+            - name: create new workflow
               env:          
                 GithubBranch: ${{ github.ref_name }}
                 GithubRepoName: ${{ github.event.repository.name }}
                 GithubOwner: ${{ github.repository_owner }}
-              run: node ./util/stmd/parse_to_yaml.js -f "./data/data2/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
-              # run: node ./util/stmd/parse_to_yaml.js -f "./data/demonstration-test/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
-            - name: push new test pipeline
-              # The push will NOT trigger an infinite loop, see https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow
+              run: node ./util/stmd/parse_to_yaml.js -f "./data/dc.motor/extra/net.pmsf.ssp.stmd/SimulationTask.stmd" -o ./.github/workflows
+            - name: push workflows
               run: |
                 git config --global user.name "Automated Test Pipeline"
                 git config --global user.email "setlabs@users.noreply.github.com"
 
                 git add ./.github/workflows
-                git commit -m "Generated new automated test pipeline, based on STMD [actions skip]"
+                git commit -m "Generated new automated all workflow, based on STMD [actions skip]"
                 git push -f
                 
             - name: display result
               run: |
-                echo "Successfully created new test pipeline:" >> $GITHUB_STEP_SUMMARY
+                echo "Successfully created new workflows" >> $GITHUB_STEP_SUMMARY
                 # cat ./.github/workflows/continuous_test.yml >> $GITHUB_STEP_SUMMARY

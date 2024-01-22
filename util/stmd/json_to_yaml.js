@@ -46,13 +46,6 @@ function jsonToYaml(cdkElements, outputFile, basename, stmdFolderPath) {
 
     let yaml_struct = {
         "name": basename,
-        // "on": {
-        //     "workflow_run": {
-        //         "workflows": ['create-pipeline'],
-        //         "types": ['completed']
-        //     }
-        // },
-        // "on" : ["push"],
         "on" : {
             "workflow_call" : {
                 "outputs" : {
@@ -119,7 +112,7 @@ function allToYaml(actionList) {
         // },
         "on": {
             "workflow_run": {
-                "workflows": ['create-pipeline'],
+                "workflows": ['create-workflows'],
                 "types": ['completed']
             }
         },
@@ -185,7 +178,7 @@ function allToYaml(actionList) {
     allJson["jobs"]["all"]["steps"].push(step1);
 
     allJson["jobs"]["all"]["steps"].push({
-        "name": "push new test pipeline",
+        "name": "push results",
         "run": "git config --global user.name \"Add results\"\ngit config --global user.email \"setlabs@users.noreply.github.com\"\n\ngit add ./.github/outputs\ngit commit -m \"Add results [actions skip]\"\ngit push\n"
     });
 
