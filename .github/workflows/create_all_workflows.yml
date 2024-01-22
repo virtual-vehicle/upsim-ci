@@ -2,7 +2,7 @@ name: create-workflows
 on:
   push:
 jobs:
-    rw:
+    create-all-workflows:
         runs-on: ubuntu-20.04
         steps:
             - name: checkout simulation data
