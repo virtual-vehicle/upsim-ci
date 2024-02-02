@@ -1,0 +1,200 @@
+[
+    {
+        "result": true,
+        "log": "The justification with ID #justification_parameter_specification is comprehensive.",
+        "level": "1",
+        "id": "justification_parameter_specifications"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_resistance can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_R"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_inductivity can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_L"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_motor_constant can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_cmot"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_bordnet_voltage can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_cmot"
+    },
+    {
+        "result": false,
+        "log": "The given resource IRI #spec_parameter_inertia is not existing in the named graph",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_J"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_damping_constant can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_d"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_load_torque can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_Ml"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_parameter_friction_torque can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_parameter_Mfr"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_motor_constant representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_cmot"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_damping_constant representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_d"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_inerta representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_J"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_inductivity representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_L"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_friction_torque representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_Mfr"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_load_torque representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_Ml"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_resistance representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_R"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_bordnet_voltage representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_parameter_Ubat"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_resistance does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_R"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_inductivity does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_L"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_motor_constant does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_cmot"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_bordnet_voltage does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_cmot"
+    },
+    {
+        "result": false,
+        "log": "The given resource IRI #spec_parameter_inertia is not existing in the named graph",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_J"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_damping_constant does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_d"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_load_torque does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_Ml"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_parameter_friction_torque does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_parameter_Mfr"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_motor_constant representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_cmot"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_damping_constant representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_d"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_inerta representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_J"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_inductivity representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_L"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_friction_torque representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_Mfr"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_load_torque representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_Ml"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_resistance representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_R"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_parameter_bordnet_voltage representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_parameter_Ubat"
+    }
+]

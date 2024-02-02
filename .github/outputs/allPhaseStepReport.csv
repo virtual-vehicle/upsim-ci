@@ -1,0 +1,15 @@
+Phase, Step, Test passed, Reached Level, Result 
+RequirementsPhase,DefineModelRequirements,29/35,0,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.0.RequirementsPhase.DefineModelRequirements.json 
+RequirementsPhase,DefineParameterRequirements,10/11,2,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.1.RequirementsPhase.DefineParameterRequirements.json 
+RequirementsPhase,DefineSimulationEnvironmentRequirements,3/5,1,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.2.RequirementsPhase.DefineSimulationEnvironmentRequirements.json 
+RequirementsPhase,DefineSimulationIntegrationRequirements,10/20,0,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.json 
+RequirementsPhase,DefineTestCaseRequirements,5/8,1,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.4.RequirementsPhase.DefineTestCaseRequirements.json 
+DesignPhase,DefineModelDesignSpecification,27/35,1,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.5.DesignPhase.DefineModelDesignSpecification.json 
+DesignPhase,DefineParameterDesignSpecification,24/33,1,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.6.DesignPhase.DefineParameterDesignSpecification.json 
+DesignPhase,DefineSimulationEnvironmentDesignSpecification,4/5,2,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.json 
+DesignPhase,DefineSimulationIntegrationDesignSpecification,27/32,2,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.8.DesignPhase.DefineSimulationIntegrationDesignSpecification.json 
+DesignPhase,DefineTestCaseDesignSpecification,5/6,2,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.9.DesignPhase.DefineTestCaseDesignSpecification.json 
+ImplementationPhase,ImplementModel,10/12,0,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.10.ImplementationPhase.ImplementModel.json 
+ImplementationPhase,ImplementParameter,2/3,0,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.11.ImplementationPhase.ImplementParameter.json 
+ImplementationPhase,IntegrateSimulation,1/1,3,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.12.ImplementationPhase.IntegrateSimulation.json 
+EvaluationPhase,EvaluateSimulationResults,7/14,0,https://github.com/virtual-vehicle/upsim-ci/blob/master/.github/outputs/No.13.EvaluationPhase.EvaluateSimulationResults.json 

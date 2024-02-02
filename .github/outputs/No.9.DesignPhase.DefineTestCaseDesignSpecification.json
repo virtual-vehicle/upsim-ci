@@ -1,0 +1,39 @@
+[
+    {
+        "result": true,
+        "log": "The justification with ID #justification_test_testcase is comprehensive.",
+        "level": "1",
+        "id": "justification_testcase"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_test_testcase_config_spec is comprehensive.",
+        "level": "1",
+        "id": "justification_test_config_spec"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_testcase can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_test_case"
+    },
+    {
+        "result": true,
+        "log": "The linkage of the design specification #spec_testcase are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_test_case"
+    },
+    {
+        "result": false,
+        "log": "The resource #req_integration_03 was expected to be located in the phase stmd:DesignPhase",
+        "actualPhase": "stmd:RequirementsPhase",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_test_case"
+    },
+    {
+        "result": true,
+        "log": "The linkage of the design specification #spec_testcase are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_test_case"
+    }
+]

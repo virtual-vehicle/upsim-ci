@@ -1,0 +1,212 @@
+[
+    {
+        "result": true,
+        "log": "The justification with ID #justification_battery_model_design is comprehensive.",
+        "level": "1",
+        "id": "justification_battery_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_copper_losses is comprehensive.",
+        "level": "1",
+        "id": "justification_copperlosses_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_electric_model_design is comprehensive.",
+        "level": "1",
+        "id": "justification_electricmodel_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_friction is comprehensive.",
+        "level": "1",
+        "id": "justification_friction_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_load_torque is comprehensive.",
+        "level": "1",
+        "id": "justification_loadtorque_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_magnetic_losses is comprehensive.",
+        "level": "1",
+        "id": "justification_magneticlosses_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_mechanic_model_design is comprehensive.",
+        "level": "1",
+        "id": "justification_mechanicmodel_expertcheck"
+    },
+    {
+        "result": true,
+        "log": "Design specification #design_submodel_battery can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_battery_submodel"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_submodelMechanic_friction can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_brush_friction"
+    },
+    {
+        "result": true,
+        "log": "Design specification #design_electric_magnetic_losses can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_magnetic_losses"
+    },
+    {
+        "result": true,
+        "log": "Design specification #design_electric_copper_losses can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_copper_losses"
+    },
+    {
+        "result": false,
+        "log": "The design specification #design_submodel_electrical is justified by #design_electric_heat_model with a resource from the undefined, but must not come from the implementation phase or evaluation phase",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_electric_submodel"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_submodelMechanic_load can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_load_torque"
+    },
+    {
+        "result": true,
+        "log": "Design specification #design_submodelMechanic can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_mechanic_submodel"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodel_battery representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_battery_submodel"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_electric_copper_losses representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_copper_losses"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodel_electrical  representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_electric_model"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_submodelMechanic_friction representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_friction"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_submodelMechanic_load  representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_load"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_electric_magnetic_losses representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_magnetic_losses"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodelMechanic representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_mechanic_model"
+    },
+    {
+        "result": false,
+        "log": "Design specification #design_submodel_battery does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_battery_submodel"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_submodelMechanic_friction does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_brush_friction"
+    },
+    {
+        "result": false,
+        "log": "Design specification #design_electric_magnetic_losses does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_magnetic_losses"
+    },
+    {
+        "result": false,
+        "log": "Design specification #design_electric_copper_losses does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_copper_losses"
+    },
+    {
+        "result": false,
+        "log": "Design specification #design_submodel_electrical does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_electric_submodel"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_submodelMechanic_load does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_load_torque"
+    },
+    {
+        "result": false,
+        "log": "Design specification #design_submodelMechanic does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_mechanic_submodel"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodel_battery representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_battery_submodel"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_electric_copper_losses representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_copper_losses"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodel_electrical  representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_electric_model"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_submodelMechanic_friction representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_friction"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_submodelMechanic_load  representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_load"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_electric_magnetic_losses representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_magnetic_losses"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #design_submodelMechanic representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_mechanic_model"
+    }
+]

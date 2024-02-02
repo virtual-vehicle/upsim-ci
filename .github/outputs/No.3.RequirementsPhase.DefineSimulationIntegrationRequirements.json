@@ -1,0 +1,122 @@
+[
+    {
+        "result": true,
+        "log": "The requirement with ID req_integration_02 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_integration_02_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_integration_03 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_integration_03_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_integration_04 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_integration_04_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID  req_integration_05 is violating the verifiability criterion: A definition for the term <<cover a range>> is missing.",
+        "level": "1",
+        "id": "req_integration_05_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID  req_integration_06 is violating the verifiability criterion: A definition for the term <<cover a range>> is missing.",
+        "level": "1",
+        "id": "req_integration_06_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID  req_integration_07 is violating the verifiability criterion: A definition for the term <<cover a range>> is missing.",
+        "level": "1",
+        "id": "req_integration_07_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The integration requirement collection is complete, consistent, affordable, and bounded.",
+        "level": "1",
+        "id": "req_integration_collection_semantic"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_02_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_03_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_04_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_05_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_06_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_integration_07_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_02 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_02_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_03 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_03_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_04 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_04_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_05 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_05_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_06 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_06_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_integration_07 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_integration_07_linkage_semantics"
+    },
+    {
+        "result": false,
+        "log": "Could not parse the attribute list (SyntaxError: Unexpected token I in JSON at position 1)",
+        "level": "3",
+        "id": "requirement_model_format"
+    }
+]

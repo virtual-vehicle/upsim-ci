@@ -1,0 +1,194 @@
+[
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_range_load is comprehensive.",
+        "level": "1",
+        "id": "justification_bordnet_voltage"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_rotation_torque is comprehensive.",
+        "level": "1",
+        "id": "justification_direction_rotation_load_torque"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_rotation_voltage is comprehensive.",
+        "level": "1",
+        "id": "justification_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_range_load is comprehensive.",
+        "level": "1",
+        "id": "justification_range_load_torque"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_range_speed is comprehensive.",
+        "level": "1",
+        "id": "justification_range_speed"
+    },
+    {
+        "result": true,
+        "log": "The justification with ID #justification_integration_range_voltage is comprehensive.",
+        "level": "1",
+        "id": "justification_range_voltage"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_voltage_input can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_bordnet_voltage"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_direction_of_rotation_load can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_direction_rotation_torque"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_direction_of_rotation_voltage can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_load_torque can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_load_torque_range"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_rotational_velocity_range can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_rotational_velocity_range"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_voltage_range can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_integration_voltage_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_voltage_input are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_bordnet_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_load are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_direction_rotation_torque"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_voltage are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_voltage are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_load_torque are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_load_torque_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_rotational_velocity_range are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_rotational_velocity_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_voltage_range are semantically comprehensive.",
+        "level": "2",
+        "id": "test_linkage_l2_semantics_integration_voltage_range"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_integration_voltage_input does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_bordnet_voltage"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_integration_direction_of_rotation_load does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_direction_rotation_torque"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_integration_direction_of_rotation_voltage does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_direction_rotation_voltage"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_integration_load_torque does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_load_torque_range"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_integration_rotational_velocity_range does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_rotational_velocity_range"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_integration_voltage_range is linked correctly to constraints and/or assumptions",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_integration_voltage_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_voltage_input are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_bordnet_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_load are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_direction_rotation_torque"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_voltage are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_direction_of_rotation_voltage are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_direction_rotation_voltage"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_load_torque are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_load_torque_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_rotational_velocity_range are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_rotational_velocity_range"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_integration_voltage_range are semantically comprehensive.",
+        "level": "3",
+        "id": "test_linkage_l3_semantics_integration_voltage_range"
+    }
+]

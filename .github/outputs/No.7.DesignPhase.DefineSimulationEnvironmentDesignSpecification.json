@@ -1,0 +1,32 @@
+[
+    {
+        "result": true,
+        "log": "The justification with ID #justification_environment is comprehensive.",
+        "level": "1",
+        "id": "justification_environment"
+    },
+    {
+        "result": true,
+        "log": "Design specification #spec_environment can be traced to source and implementation",
+        "level": "2",
+        "id": "test_linkage_l2_syntax_environment"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_environment representing the justification and implementing artifacts are semantically correct",
+        "level": "2",
+        "id": "test_linkage_l2_semantic_environment"
+    },
+    {
+        "result": false,
+        "log": "Design specification #spec_environment does not have any linked constraint or assumption",
+        "level": "3",
+        "id": "test_linkage_l3_syntax_environment"
+    },
+    {
+        "result": true,
+        "log": "The links of the design specification #spec_environment representing the justification and implementing artifacts are semantically correct",
+        "level": "3",
+        "id": "test_linkage_l3_semantic_environment"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "result": true,
+        "log": "Performed static check of the FMU model description for the the battery model (ID #implementation_battery). The model description is free of deficiencies.",
+        "level": "1",
+        "id": "implementation_code_review_battery"
+    },
+    {
+        "result": true,
+        "log": "Performed static check of the FMU model description for the the electrical model (ID #implementation_electrics). The model description is free of deficiencies.",
+        "level": "1",
+        "id": "implementation_code_review_electric"
+    },
+    {
+        "result": true,
+        "log": "Performed static check of the FMU model description for the the mechanical model (ID #implementation_mechanics). The model description is free of deficiencies.",
+        "level": "1",
+        "id": "implementation_code_review_mechanics"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_R"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_cmot_static"
+    },
+    {
+        "result": false,
+        "log": "simulation results do not match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_cmot_dynamic"
+    },
+    {
+        "result": false,
+        "log": "SyntaxError: Unexpected \"-\" in \"-\" at index 0",
+        "level": "1",
+        "id": "plausibility_increase_L"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_J_static"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_J_dynamic"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_d"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_Ml"
+    },
+    {
+        "result": true,
+        "log": "simulation results match the expectation",
+        "level": "1",
+        "id": "plausibility_increase_Mfr"
+    }
+]

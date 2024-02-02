@@ -1,0 +1,86 @@
+[
+    {
+        "result": false,
+        "log": "Comparing only the measurements to the simulation using the nominal values, the deviation is acceptable. When comparing the total uncertainty range to the measurements, it can be noticed that the results for the parameter configuration leading to the least dynamic DC motor instance has a relative deviation of about 20%, which is not acceptable. This is mainly caused by the high uncertainty of the resistance parameter (the maximum value deviates more than 40% with respect to the nominal value). Therefore, more information is needed for the distribution of the resistance parameter.",
+        "level": "1",
+        "id": "evaluation_expert_validation"
+    },
+    {
+        "result": true,
+        "log": "mean absolute error is below threshold",
+        "level": "2",
+        "id": "evaluation_mae_nominal_results_measurement_1"
+    },
+    {
+        "result": true,
+        "log": "mean absolute error is below threshold",
+        "level": "2",
+        "id": "evaluation_mae_nominal_results_measurement_2"
+    },
+    {
+        "result": false,
+        "log": "mean absolute error exceeds threshold",
+        "level": "2",
+        "id": "evaluation_mae_nominal_results_measurement_3"
+    },
+    {
+        "result": true,
+        "log": "mean absolute error is below threshold",
+        "level": "2",
+        "id": "evaluation_mae_nominal_results_measurement_4"
+    },
+    {
+        "result": false,
+        "log": "Mean absolute percent error exceeds threshold",
+        "level": "2",
+        "id": "evaluation_mape_slowest_results_measurement_1"
+    },
+    {
+        "result": false,
+        "log": "Mean absolute percent error exceeds threshold",
+        "level": "2",
+        "id": "evaluation_mape_slowest_results_measurement_2"
+    },
+    {
+        "result": false,
+        "log": "Mean absolute percent error exceeds threshold",
+        "level": "2",
+        "id": "evaluation_mape_slowest_results_measurement_3"
+    },
+    {
+        "result": false,
+        "log": "Mean absolute percent error exceeds threshold",
+        "level": "2",
+        "id": "evaluation_mape_slowest_results_measurement_4"
+    },
+    {
+        "result": true,
+        "log": "Mean absolute percent error is below threshold",
+        "level": "2",
+        "id": "evaluation_mape_fastest_results_measurement_1"
+    },
+    {
+        "result": true,
+        "log": "Mean absolute percent error is below threshold",
+        "level": "2",
+        "id": "evaluation_mape_fastest_results_measurement_2"
+    },
+    {
+        "result": true,
+        "log": "Mean absolute percent error is below threshold",
+        "level": "2",
+        "id": "evaluation_mape_fastest_results_measurement_3"
+    },
+    {
+        "result": true,
+        "log": "Mean absolute percent error is below threshold",
+        "level": "2",
+        "id": "evaluation_mape_fastest_results_measurement_4"
+    },
+    {
+        "result": false,
+        "log": "simulation distribution must either implement the schema of the empirical distribution or of the p-boxes",
+        "level": "3",
+        "id": "evaluation_area_validation_metric"
+    }
+]

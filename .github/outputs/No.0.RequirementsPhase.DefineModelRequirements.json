@@ -1,0 +1,212 @@
+[
+    {
+        "result": true,
+        "log": "The requirement with ID #req_model_01 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_01_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID req_model_02 is violating the completeness criterion: The effects to be considered using the torque generation are not described",
+        "level": "1",
+        "id": "req_model_02_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_03 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_03_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_04 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_04_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_05 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_05_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_06 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_06_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_07 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_07_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID req_model_08 is violating the completeness criterion: It is not clear, which effects of the kinematics to consider in which detailing degree.",
+        "level": "1",
+        "id": "req_model_08_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_model_09 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_model_09_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID req_model_10 is violating the completeness criterion: The physical principal of how to model the brush friction is not given.",
+        "level": "1",
+        "id": "req_model_10_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The requirement with ID req_model_11 is violating the completeness criterion: The physical principal of how to model the bearing friction is not given.",
+        "level": "1",
+        "id": "req_model_11_single_semantic"
+    },
+    {
+        "result": false,
+        "log": "The model requirement collection is violating the completeness criterion: Further requirements are expected to clearify the detailing degree of the models, especially how physical effects should be modelled.",
+        "level": "1",
+        "id": "req_model_collection_semantic"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_01) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_01_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_02) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_02_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_03) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_03_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_04) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_04_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_05) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_05_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_06) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_06_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_07) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_07_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_08) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_08_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_09) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_09_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_10) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_10_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "Resource (#req_model_11) is linked to a source and validation result",
+        "level": "2",
+        "id": "req_model_11_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_01 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_01_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_02 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_02_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_03 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_03_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_04 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_04_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_05 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_05_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_06 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_06_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_07 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_07_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_08 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_08_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_09 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_09_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_10 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_10_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_model_11 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_model_11_linkage_semantics"
+    },
+    {
+        "result": false,
+        "log": "Could not parse the attribute list (SyntaxError: Unexpected token I in JSON at position 1)",
+        "level": "3",
+        "id": "requirement_model_format"
+    }
+]

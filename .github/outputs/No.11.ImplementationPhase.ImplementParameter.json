@@ -1,0 +1,20 @@
+[
+    {
+        "result": false,
+        "log": "The model description for the battery model (ID #implementation_battery) does not implement the parameter specifications correctly: The boundary values are not considered!",
+        "level": "1",
+        "id": "implementation_expert_parameter_check_battery"
+    },
+    {
+        "result": true,
+        "log": "The SSV file for the electrics model (ID #implementation_parameters_electrics) and the model description for the electrics model (ID #implementation_electrics) are implementing the parameter specifications correctly.",
+        "level": "1",
+        "id": "implementation_expert_parameter_check_electrics"
+    },
+    {
+        "result": true,
+        "log": "The SSV file for the mechanics model (ID #implementation_parameters_mechanics) and the model description for the mechanics model (ID #implementation_mechanics) are implementing the parameter specifications correctly.",
+        "level": "1",
+        "id": "implementation_expert_parameter_check_mechanics"
+    }
+]

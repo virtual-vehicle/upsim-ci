@@ -1,0 +1,50 @@
+[
+    {
+        "result": true,
+        "log": "The requirement with ID req_test_01 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_test_01_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The requirement with ID req_test_02 is necessary, unambiguous, complete, singular, achievable, and verifiable.",
+        "level": "1",
+        "id": "req_test_02_single_semantic"
+    },
+    {
+        "result": true,
+        "log": "The test case requirement collection is complete, consistent, affordable, and bounded.",
+        "level": "1",
+        "id": "req_test_collection_semantic"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_test_01_linkage_syntax"
+    },
+    {
+        "result": false,
+        "log": "Named graph does not follow the schema",
+        "level": "2",
+        "id": "req_test_02_linkage_syntax"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_test_01 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_test_01_linkage_semantics"
+    },
+    {
+        "result": true,
+        "log": "The links of requirement req_test_02 to its source and validation results are semantically correct.",
+        "level": "2",
+        "id": "req_test_02_linkage_semantics"
+    },
+    {
+        "result": false,
+        "log": "Could not parse the attribute list (SyntaxError: Unexpected token I in JSON at position 1)",
+        "level": "3",
+        "id": "requirement_model_format"
+    }
+]
