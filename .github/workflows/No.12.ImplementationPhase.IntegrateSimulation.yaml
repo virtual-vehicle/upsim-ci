@@ -1,0 +1,42 @@
+name: No_12_ImplementationPhase_IntegrateSimulation
+on:
+  workflow_call:
+    outputs:
+      summary:
+        value: ${{jobs.No_12_ImplementationPhase_IntegrateSimulation.outputs.summary}}
+    secrets:
+      WRITE_WORKFLOW:
+        required: true
+jobs:
+  No_12_ImplementationPhase_IntegrateSimulation:
+    runs-on: ubuntu-20.04
+    outputs:
+      summary: ${{steps.outputStep.outputs.summary}}
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.WRITE_WORKFLOW }}
+      - name: Install compatible node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install CDK modules
+        working-directory: Credibility-Assessment-Framework/Credibility-Development-Kit
+        run: find . -maxdepth 4 -name package.json -exec sh -c 'for file do dir=${file%/*}; npm install --prefix $dir $dir; done' sh {} +
+      - name: set STMD Folder path
+        run: echo 'STMDFOLDERPATH=/home/runner/work/upsim-ci/upsim-ci/data/dc-motor/extra/net.pmsf.ssp.stmd' >> $GITHUB_ENV && echo $STMDFOLDERPATH
+      - name: preprocessing_system_structure
+        run: rs=$(node -e 'process.stdout.write(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/adapters/ssd-adapter", "translate", ["path"], ["/home/runner/work/upsim-ci/upsim-ci/data/dc-motor/resources/system/dc_motor_system.ssd"]))') && echo $rs && mkdir -p /home/runner/work/upsim-ci/upsim-ci/data/dc-motor/extra/net.pmsf.ssp.stmd/documents/implementation/credibility/level_1/system_structure && echo $rs > /home/runner/work/upsim-ci/upsim-ci/data/dc-motor/extra/net.pmsf.ssp.stmd/documents/implementation/credibility/level_1/system_structure/system.json
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1
+      - name: implementation_integration_system_structure
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1", "checkSystemStructure", ["file"], ["./documents/implementation/credibility/level_1/system_structure/system.json"], {"level":"1","id":"implementation_integration_system_structure"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.12.ImplementationPhase.IntegrateSimulation.cdkResult.json
+      - name: show report
+        run: cat No.12.ImplementationPhase.IntegrateSimulation.cdkResult.json
+      - name: send to outputs
+        id: outputStep
+        run: echo "summary=$(cat
+          No.12.ImplementationPhase.IntegrateSimulation.cdkResult.json)" >>
+          $GITHUB_OUTPUT

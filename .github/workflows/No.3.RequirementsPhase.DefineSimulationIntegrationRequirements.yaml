@@ -1,0 +1,83 @@
+name: No_3_RequirementsPhase_DefineSimulationIntegrationRequirements
+on:
+  workflow_call:
+    outputs:
+      summary:
+        value: ${{jobs.No_3_RequirementsPhase_DefineSimulationIntegrationRequirements.outputs.summary}}
+    secrets:
+      WRITE_WORKFLOW:
+        required: true
+jobs:
+  No_3_RequirementsPhase_DefineSimulationIntegrationRequirements:
+    runs-on: ubuntu-20.04
+    outputs:
+      summary: ${{steps.outputStep.outputs.summary}}
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.WRITE_WORKFLOW }}
+      - name: Install compatible node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install CDK modules
+        working-directory: Credibility-Assessment-Framework/Credibility-Development-Kit
+        run: find . -maxdepth 4 -name package.json -exec sh -c 'for file do dir=${file%/*}; npm install --prefix $dir $dir; done' sh {} +
+      - name: set STMD Folder path
+        run: echo 'STMDFOLDERPATH=/home/runner/work/upsim-ci/upsim-ci/data/dc-motor/extra/net.pmsf.ssp.stmd' >> $GITHUB_ENV && echo $STMDFOLDERPATH
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1
+      - name: req_integration_02_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_02.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_02_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_03_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_03.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_03_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_04_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_04.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_04_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_05_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_05.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_05_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_06_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_06.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_06_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_07_single_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkSingleSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_07.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_07_single_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_collection_semantic
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1", "checkCollectionSemantic", ["file","file"], ["./documents/requirements/credibility/level_1/expertStatement_req_integration_collection.json","./documents/keystore/public.pem"], {"level":"1","id":"req_integration_collection_semantic"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2
+      - name: req_integration_02_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_02.json","#req_integration_02","./SimulationTask.stmd"], {"level":"2","id":"req_integration_02_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_03_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_03.json","#req_integration_03","./SimulationTask.stmd"], {"level":"2","id":"req_integration_03_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_04_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_04.json","#req_integration_04","./SimulationTask.stmd"], {"level":"2","id":"req_integration_04_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_05_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_05.json","#req_integration_05","./SimulationTask.stmd"], {"level":"2","id":"req_integration_05_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_06_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_06.json","#req_integration_06","./SimulationTask.stmd"], {"level":"2","id":"req_integration_06_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_07_linkage_syntax
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/requirements/integration_07.json","#req_integration_07","./SimulationTask.stmd"], {"level":"2","id":"req_integration_07_linkage_syntax"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_02_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_02.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_02_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_03_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_03.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_03_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_04_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_04.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_04_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_05_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_05.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_05_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_06_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_06.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_06_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: req_integration_07_linkage_semantics
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/requirements/credibility/level_2/expertStatement_req_linkage_integration_07.json","./documents/keystore/public.pem"], {"level":"2","id":"req_integration_07_linkage_semantics"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_3 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_3
+      - name: requirement_model_format
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_3", "checkRequirementCollectionFormat", ["file","inline"], ["./documents/requirements/reqif/dc_motor.reqif","['ID', 'Description', 'Type', 'State']"], {"level":"3","id":"requirement_model_format"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: show report
+        run: cat
+          No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json
+      - name: send to outputs
+        id: outputStep
+        run: echo "summary=$(cat
+          No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.cdkResult.json)"
+          >> $GITHUB_OUTPUT

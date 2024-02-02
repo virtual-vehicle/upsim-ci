@@ -1,0 +1,131 @@
+name: all
+on:
+  workflow_run:
+    workflows:
+      - create-workflows
+    types:
+      - completed
+jobs:
+  all:
+    runs-on: ubuntu-20.04
+    needs:
+      - No_0_RequirementsPhase_DefineModelRequirements
+      - No_1_RequirementsPhase_DefineParameterRequirements
+      - No_2_RequirementsPhase_DefineSimulationEnvironmentRequirements
+      - No_3_RequirementsPhase_DefineSimulationIntegrationRequirements
+      - No_4_RequirementsPhase_DefineTestCaseRequirements
+      - No_5_DesignPhase_DefineModelDesignSpecification
+      - No_6_DesignPhase_DefineParameterDesignSpecification
+      - No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification
+      - No_8_DesignPhase_DefineSimulationIntegrationDesignSpecification
+      - No_9_DesignPhase_DefineTestCaseDesignSpecification
+      - No_10_ImplementationPhase_ImplementModel
+      - No_11_ImplementationPhase_ImplementParameter
+      - No_12_ImplementationPhase_IntegrateSimulation
+      - No_13_EvaluationPhase_EvaluateSimulationResults
+    steps:
+      - name: checkout simulation data
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.WRITE_WORKFLOW }}
+      - name: install prerequisites
+        run: >
+          cd util/stmd
+
+          npm install yaml
+
+          cd ../..
+
+          npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud ./Credibility-Assessment-Framework/Credibility-Development-Kit/util/stmd-crud
+      - name: make output folder
+        run: mkdir -p ./.github/outputs
+      - env:
+          GithubBranch: ${{github.ref_name}}
+          GithubRepoName: ${{github.event.repository.name}}
+          GithubOwner: ${{github.repository_owner}}
+          No_0_RequirementsPhase_DefineModelRequirements: ${{needs.No_0_RequirementsPhase_DefineModelRequirements.outputs.summary}}
+          No_1_RequirementsPhase_DefineParameterRequirements: ${{needs.No_1_RequirementsPhase_DefineParameterRequirements.outputs.summary}}
+          No_2_RequirementsPhase_DefineSimulationEnvironmentRequirements:
+            ${{needs.No_2_RequirementsPhase_DefineSimulationEnvironmentRequirements.outputs.summary}}
+          No_3_RequirementsPhase_DefineSimulationIntegrationRequirements:
+            ${{needs.No_3_RequirementsPhase_DefineSimulationIntegrationRequirements.outputs.summary}}
+          No_4_RequirementsPhase_DefineTestCaseRequirements: ${{needs.No_4_RequirementsPhase_DefineTestCaseRequirements.outputs.summary}}
+          No_5_DesignPhase_DefineModelDesignSpecification: ${{needs.No_5_DesignPhase_DefineModelDesignSpecification.outputs.summary}}
+          No_6_DesignPhase_DefineParameterDesignSpecification: ${{needs.No_6_DesignPhase_DefineParameterDesignSpecification.outputs.summary}}
+          No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification:
+            ${{needs.No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification.outputs.summary}}
+          No_8_DesignPhase_DefineSimulationIntegrationDesignSpecification:
+            ${{needs.No_8_DesignPhase_DefineSimulationIntegrationDesignSpecification.outputs.summary}}
+          No_9_DesignPhase_DefineTestCaseDesignSpecification: ${{needs.No_9_DesignPhase_DefineTestCaseDesignSpecification.outputs.summary}}
+          No_10_ImplementationPhase_ImplementModel: ${{needs.No_10_ImplementationPhase_ImplementModel.outputs.summary}}
+          No_11_ImplementationPhase_ImplementParameter: ${{needs.No_11_ImplementationPhase_ImplementParameter.outputs.summary}}
+          No_12_ImplementationPhase_IntegrateSimulation: ${{needs.No_12_ImplementationPhase_IntegrateSimulation.outputs.summary}}
+          No_13_EvaluationPhase_EvaluateSimulationResults: ${{needs.No_13_EvaluationPhase_EvaluateSimulationResults.outputs.summary}}
+          allActionList: No_0_RequirementsPhase_DefineModelRequirements,No_1_RequirementsPhase_DefineParameterRequirements,No_2_RequirementsPhase_DefineSimulationEnvironmentRequirements,No_3_RequirementsPhase_DefineSimulationIntegrationRequirements,No_4_RequirementsPhase_DefineTestCaseRequirements,No_5_DesignPhase_DefineModelDesignSpecification,No_6_DesignPhase_DefineParameterDesignSpecification,No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification,No_8_DesignPhase_DefineSimulationIntegrationDesignSpecification,No_9_DesignPhase_DefineTestCaseDesignSpecification,No_10_ImplementationPhase_ImplementModel,No_11_ImplementationPhase_ImplementParameter,No_12_ImplementationPhase_IntegrateSimulation,No_13_EvaluationPhase_EvaluateSimulationResults,
+        run: node ./util/stmd/results.js -s -o summary.md && cat summary.md >>
+          $GITHUB_STEP_SUMMARY
+      - name: push results
+        run: |
+          git config --global user.name "Add results"
+          git config --global user.email "setlabs@users.noreply.github.com"
+
+          git add ./.github/outputs
+          git commit -m "Add results [actions skip]"
+          git push
+  No_0_RequirementsPhase_DefineModelRequirements:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.0.RequirementsPhase.DefineModelRequirements.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_1_RequirementsPhase_DefineParameterRequirements:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.1.RequirementsPhase.DefineParameterRequirements.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_2_RequirementsPhase_DefineSimulationEnvironmentRequirements:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.2.RequirementsPhase.DefineSimulationEnvironmentRequirements.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_3_RequirementsPhase_DefineSimulationIntegrationRequirements:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.3.RequirementsPhase.DefineSimulationIntegrationRequirements.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_4_RequirementsPhase_DefineTestCaseRequirements:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.4.RequirementsPhase.DefineTestCaseRequirements.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_5_DesignPhase_DefineModelDesignSpecification:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.5.DesignPhase.DefineModelDesignSpecification.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_6_DesignPhase_DefineParameterDesignSpecification:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.6.DesignPhase.DefineParameterDesignSpecification.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_8_DesignPhase_DefineSimulationIntegrationDesignSpecification:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.8.DesignPhase.DefineSimulationIntegrationDesignSpecification.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_9_DesignPhase_DefineTestCaseDesignSpecification:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.9.DesignPhase.DefineTestCaseDesignSpecification.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_10_ImplementationPhase_ImplementModel:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.10.ImplementationPhase.ImplementModel.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_11_ImplementationPhase_ImplementParameter:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.11.ImplementationPhase.ImplementParameter.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_12_ImplementationPhase_IntegrateSimulation:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.12.ImplementationPhase.IntegrateSimulation.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}
+  No_13_EvaluationPhase_EvaluateSimulationResults:
+    uses: virtual-vehicle/upsim-ci/.github/workflows/No.13.EvaluationPhase.EvaluateSimulationResults.yaml@master
+    secrets:
+      WRITE_WORKFLOW: ${{secrets.WRITE_WORKFLOW}}

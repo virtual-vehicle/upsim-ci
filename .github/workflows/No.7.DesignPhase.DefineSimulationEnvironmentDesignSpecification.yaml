@@ -1,0 +1,53 @@
+name: No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification
+on:
+  workflow_call:
+    outputs:
+      summary:
+        value: ${{jobs.No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification.outputs.summary}}
+    secrets:
+      WRITE_WORKFLOW:
+        required: true
+jobs:
+  No_7_DesignPhase_DefineSimulationEnvironmentDesignSpecification:
+    runs-on: ubuntu-20.04
+    outputs:
+      summary: ${{steps.outputStep.outputs.summary}}
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.WRITE_WORKFLOW }}
+      - name: Install compatible node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install CDK modules
+        working-directory: Credibility-Assessment-Framework/Credibility-Development-Kit
+        run: find . -maxdepth 4 -name package.json -exec sh -c 'for file do dir=${file%/*}; npm install --prefix $dir $dir; done' sh {} +
+      - name: set STMD Folder path
+        run: echo 'STMDFOLDERPATH=/home/runner/work/upsim-ci/upsim-ci/data/dc-motor/extra/net.pmsf.ssp.stmd' >> $GITHUB_ENV && echo $STMDFOLDERPATH
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1
+      - name: justification_environment
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1", "checkJustification", ["file","file"], ["./documents/design/credibility/level_1/expertStatement_justification_environment.json","./documents/keystore/public.pem"], {"level":"1","id":"justification_environment"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2
+      - name: test_linkage_l2_syntax_environment
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2", "checkLinkageSyntax", ["file","inline","file"], ["./documents/design/credibility/level_2/link_environment_simulation_tool.json","#spec_environment","./SimulationTask.stmd"], {"level":"2","id":"test_linkage_l2_syntax_environment"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: test_linkage_l2_semantic_environment
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2", "checkLinkageSemantics", ["file","file"], ["./documents/design/credibility/level_2/expertcheck_linkage_environment.json","./documents/keystore/public.pem"], {"level":"2","id":"test_linkage_l2_semantic_environment"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: install CDK module
+        run: npm install --prefix ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_3 ./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_3
+      - name: test_linkage_l3_syntax_environment
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_3", "checkLinkageSyntax", ["file","inline","file"], ["./documents/design/credibility/level_2/link_environment_simulation_tool.json","#spec_environment","./SimulationTask.stmd"], {"level":"3","id":"test_linkage_l3_syntax_environment"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: test_linkage_l3_semantic_environment
+        run: rs=$(node -e 'process.stdout.write(JSON.stringify(require("./util/wrapper/fcnWrapper.js").wrapper("./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_3", "checkLinkageSemantics", ["file","file"], ["./documents/design/credibility/level_2/expertcheck_linkage_environment.json","./documents/keystore/public.pem"], {"level":"3","id":"test_linkage_l3_semantic_environment"})))') && echo $rs &&  node ./util/stmd/results.js -p "$rs" -o No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: show report
+        run: cat
+          No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json
+      - name: send to outputs
+        id: outputStep
+        run: echo "summary=$(cat
+          No.7.DesignPhase.DefineSimulationEnvironmentDesignSpecification.cdkResult.json)"
+          >> $GITHUB_OUTPUT
