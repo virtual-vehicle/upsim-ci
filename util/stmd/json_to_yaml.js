@@ -341,21 +341,25 @@ function translateEvidenceElement(element, outputPath, stmdFolderPath) {
                 }
             }
 
-            // var outputFolderPath = path.dirname(outputPath);
-
-            // if (!fs.existsSync(outputFolderPath)){
-            //     fs.mkdirSync(outputFolderPath, { recursive: true });
-            // }
-
             // compose step
             var metadata = {
                 level : element.attributes.level,
                 id : test.attributes.id
             }
-            steps.push({
-                name: test.attributes.id,
-                run: "rs=$(node -e 'process.stdout.write(JSON.stringify(require(\"./util/wrapper/fcnWrapper.js\").wrapper(\"" + metric.attributes.packageUri + "\", \"" + metric.attributes.function + "\", [" + functionMethods.join(",") + "], [" + functionArgs.join(",") + "], "+JSON.stringify(metadata)+")))') && echo $rs &&  node ./util/stmd/results.js -p \"$rs\" -o "+outputPath
-            });
+
+            if (test.Return) {
+                var returnPath = path.resolve(stmdFolderPath, test.Return.path);
+
+                steps.push({
+                    name: test.attributes.id,
+                    run: "rs=$(node -e 'process.stdout.write(JSON.stringify(require(\"./util/wrapper/fcnWrapper.js\").wrapper(\"" + metric.attributes.packageUri + "\", \"" + metric.attributes.function + "\", [" + functionMethods.join(",") + "], [" + functionArgs.join(",") + "], "+JSON.stringify(metadata)+")))') && echo $rs && echo $rs > "+returnPath+" &&  node ./util/stmd/results.js -p \"$rs\" -o "+outputPath
+                });
+            } else {
+                steps.push({
+                    name: test.attributes.id,
+                    run: "rs=$(node -e 'process.stdout.write(JSON.stringify(require(\"./util/wrapper/fcnWrapper.js\").wrapper(\"" + metric.attributes.packageUri + "\", \"" + metric.attributes.function + "\", [" + functionMethods.join(",") + "], [" + functionArgs.join(",") + "], "+JSON.stringify(metadata)+")))') && echo $rs &&  node ./util/stmd/results.js -p \"$rs\" -o "+outputPath
+                });
+            }
         }
     }
 

@@ -39,7 +39,10 @@ if (isSinglePhase == true) {
     valueOutput.push(value);
     fs.writeFileSync(outputFilePath, JSON.stringify(valueOutput))
 } else {
-    valueOutput = "### CDK Report :rocket: \n| Phase | Step | Test passed | Reached Level | Result | \n | ---- | ---- | ---- | ---- | ---- | \n"
+    valueOutput = "### [CDK Report]("+"https://github.com/"+process.env.GithubOwner+"/"+process.env.GithubRepoName+"/blob/"+process.env.GithubBranch+"/.github/outputs/allPhaseStepReport.csv"+") :rocket: \n| Phase | Step | Test passed | Reached Level | Result | \n | ---- | ---- | ---- | ---- | ---- | \n"
+    
+    var allPhaseStepReportCSV = "Phase, Step, Test passed, Reached Level, Result \n";
+    
     let allActionList = process.env.allActionList;
     
     let actionList = allActionList.split(",");
@@ -76,15 +79,22 @@ if (isSinglePhase == true) {
             let fileURL = "https://github.com/"+process.env.GithubOwner+"/"+process.env.GithubRepoName+"/blob/"+process.env.GithubBranch+"/.github/outputs/"+fileName+".json";
 
             valueOutput += "| "+phaseName+" | "+stepName+" | "+passedCount+"/"+ rs.length + "|" + minLevel +" | [view]("+fileURL+") | \n"
+            allPhaseStepReportCSV += phaseName+","+stepName+","+passedCount+"/"+ rs.length + "," + minLevel +","+fileURL+" \n"
 
             fs.writeFileSync("./.github/outputs/"+fileName+".json", JSON.stringify(rsFullObj, null, 4));
         }
     }
+    fs.writeFileSync("./.github/outputs/allPhaseStepReport.csv", allPhaseStepReportCSV);
 
-    valueOutput += "#### Phase Report \n| Phase | Reached Level | \n | ---- | ---- | \n"
+    var allPhaseReport = "Phase,Reached Level\n";
+
+    valueOutput += "#### [Phase Report]("+"https://github.com/"+process.env.GithubOwner+"/"+process.env.GithubRepoName+"/blob/"+process.env.GithubBranch+"/.github/outputs/allPhaseReport.csv"+") \n| Phase | Reached Level | \n | ---- | ---- | \n"
     for (let p in reportByPhase) {
         valueOutput += "|"+ reportByPhase[p]["phaseName"] + "|" + reportByPhase[p]["reachedLevel"] + "| \n"
+        allPhaseReport += reportByPhase[p]["phaseName"] + "," + reportByPhase[p]["reachedLevel"] + " \n"
     }
+
+    fs.writeFileSync("./.github/outputs/allPhaseReport.csv", allPhaseReport);
 
     fs.writeFileSync(outputFilePath, valueOutput)
 }

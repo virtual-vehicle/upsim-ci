@@ -553,7 +553,7 @@
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1"
                                     function="checkSingleSemantic">
                                     <cdk:Test id="req_parameter_01_single_semantic">
@@ -733,7 +733,7 @@
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1"
                                     function="checkSingleSemantic">
                                     <cdk:Test id="req_environment_01_single_semantic">
@@ -856,7 +856,7 @@
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1"
                                     function="checkSingleSemantic">
                                     <cdk:Test id="req_integration_02_single_semantic">
@@ -1134,7 +1134,7 @@
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/requirements/level_1"
                                     function="checkSingleSemantic">
                                     <cdk:Test id="req_test_01_single_semantic">
@@ -1359,7 +1359,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1"
                                     function="checkJustification">
                                     <cdk:Test id="justification_battery_expertcheck">
@@ -1488,7 +1488,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         <cdk:FunctionArgument name="stmd" method="file" content="./SimulationTask.stmd"/>
                                     </cdk:Test>
                                 </cdk:Metric>
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2"
                                     function="checkLinkageSemantics">
                                     <cdk:Test id="test_linkage_l2_semantic_battery_submodel">
@@ -1589,7 +1589,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         <cdk:FunctionArgument name="stmd" method="file" content="./SimulationTask.stmd"/>
                                     </cdk:Test>
                                 </cdk:Metric>
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_2"
                                     function="checkLinkageSemantics">
                                     <cdk:Test id="test_linkage_l3_semantic_battery_submodel">
@@ -1846,7 +1846,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1"
                                     function="checkJustification">
                                     <cdk:Test id="justification_parameter_specifications">
@@ -2283,7 +2283,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1"
                                     function="checkJustification">
                                     <cdk:Test id="justification_environment">
@@ -2450,7 +2450,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1"
                                     function="checkJustification">
                                     <cdk:Test id="justification_bordnet_voltage">
@@ -2600,7 +2600,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         <cdk:FunctionArgument name="x509Certificate" method="file"
                                             content="./documents/keystore/public.pem"
                                             type="application/x-x509-ca-cert"/>
-                                    </cdk:Test>                                    
+                                    </cdk:Test>
                                     <cdk:Test id="test_linkage_l2_semantics_integration_voltage_range">
                                         <cdk:FunctionArgument name="signedExpertStatement" method="file" content="./documents/design/credibility/level_2/expertcheck_linkage_integration_voltage_range.json"/>
                                         <cdk:FunctionArgument name="x509Certificate" method="file"
@@ -2694,7 +2694,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         <cdk:FunctionArgument name="x509Certificate" method="file"
                                             content="./documents/keystore/public.pem"
                                             type="application/x-x509-ca-cert"/>
-                                    </cdk:Test>                                    
+                                    </cdk:Test>
                                     <cdk:Test id="test_linkage_l3_semantics_integration_voltage_range">
                                         <cdk:FunctionArgument name="signedExpertStatement" method="file" content="./documents/design/credibility/level_2/expertcheck_linkage_integration_voltage_range.json"/>
                                         <cdk:FunctionArgument name="x509Certificate" method="file"
@@ -2865,7 +2865,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                         <cdk:Credibility>
                             <cdk:Evidence level="1">
-                                <cdk:Metric 
+                                <cdk:Metric
                                     packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/designspecification/level_1"
                                     function="checkJustification">
                                     <cdk:Test id="justification_testcase">
@@ -3002,20 +3002,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                     <stc:Content>
                     <cdk:Credibility>
                         <cdk:Processing description="create baseline SSD file with inline SSV parameters for electrics plausi tests">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/baseline.ssd"/>
@@ -3036,20 +3036,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter R">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/R_increased.ssd"/>
@@ -3070,20 +3070,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter c_mot">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/cmot_increased.ssd"/>
@@ -3104,40 +3104,40 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter L">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/systems/L_increased.ssd"/>
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create baseline SSD file with inline SSV parameters for mechanics plausi tests">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/baseline.ssd"/>
@@ -3158,20 +3158,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter J">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/J_increased.ssd"/>
@@ -3192,20 +3192,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter d">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/d_increased.ssd"/>
@@ -3226,20 +3226,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter M_fr">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/Mfr_increased.ssd"/>
@@ -3260,20 +3260,20 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             </cdk:Outputs>
                         </cdk:Processing>
                         <cdk:Processing description="create SSD with inline parameters concerning variation of parameter M_l">
-                            <cdk:Prerequisites 
+                            <cdk:Prerequisites
                                 method="bash"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/install_prerequisites.sh"/>
                             <cdk:ComplexProcessing
                                 method="nodejs"
                                 source="./documents/implementation/credibility/ssv_ssd_integrator/ssv_to_ssd_inline.js"/>
                             <cdk:Inputs>
-                                <cdk:CommandLineArgument 
+                                <cdk:CommandLineArgument
                                     flag="-i"
                                     type="path"
                                     argument="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/template.ssd"/>
                             </cdk:Inputs>
                             <cdk:Outputs>
-                                <cdk:Output 
+                                <cdk:Output
                                     description="file where the returning string should be written to"
                                     type="text/xml"
                                     path="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems/Ml_increased.ssd"/>
@@ -3297,11 +3297,11 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             <cdk:ComplexProcessing method="github-action" source="localhorst87/run-openmcx@v0.3.0" id="simulation_run_mechainics"/>
                             <cdk:Inputs>
                                 <!-- Note: method="inline" is correct here, as the github action argument "ssd" requires the PATH of the file, NOT the content! -->
-                                <cdk:FunctionArgument 
+                                <cdk:FunctionArgument
                                     name="ssd"
                                     method="path"
                                     content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/systems"/>
-                                <cdk:FunctionArgument 
+                                <cdk:FunctionArgument
                                     name="resultDir"
                                     method="path"
                                     content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/results"/>
@@ -3420,7 +3420,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkExpertReview">
                                 <cdk:Test id="implementation_code_review_battery">
-                                    <cdk:FunctionArgument 
+                                    <cdk:FunctionArgument
                                         name="signedExpertStatement"
                                         method="file"
                                         content="./documents/implementation/credibility/level_1/expert_check_code_review_battery_modeldesc.json"
@@ -3432,7 +3432,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         type="application/x-x509-ca-cert"/>
                                 </cdk:Test>
                                 <cdk:Test id="implementation_code_review_electric">
-                                    <cdk:FunctionArgument 
+                                    <cdk:FunctionArgument
                                         name="signedExpertStatement"
                                         method="file"
                                         content="./documents/implementation/credibility/level_1/expert_check_code_review_electrics_modeldesc.json"
@@ -3444,7 +3444,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         type="application/x-x509-ca-cert"/>
                                 </cdk:Test>
                                 <cdk:Test id="implementation_code_review_mechanics">
-                                    <cdk:FunctionArgument 
+                                    <cdk:FunctionArgument
                                         name="signedExpertStatement"
                                         method="file"
                                         content="./documents/implementation/credibility/level_1/expert_check_code_review_mechanics_modeldesc.json"
@@ -3454,9 +3454,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         content="./documents/keystore/public.pem"
                                         type="application/x-x509-ca-cert"/>
-                                </cdk:Test>  
+                                </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_R">
@@ -3477,7 +3477,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/parameter_modification_R.json"/>
                                     </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_cmot_static">
@@ -3498,7 +3498,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/parameter_modification_cmot_static.json"/>
                                     </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_cmot_dynamic">
@@ -3519,7 +3519,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/parameter_modification_cmot_dynamic.json"/>
                                     </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_L">
@@ -3540,7 +3540,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_electrics/parameter_modification_L.json"/>
                                     </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_J_static">
@@ -3559,9 +3559,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         type="application/json"
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/parameter_modification_J_static.json"/>
-                                </cdk:Test>                                
+                                </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_J_dynamic">
@@ -3580,9 +3580,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         type="application/json"
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/parameter_modification_J_dynamic.json"/>
-                                </cdk:Test>                                
+                                </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_d">
@@ -3601,9 +3601,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         type="application/json"
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/parameter_modification_d.json"/>
-                                </cdk:Test>                                
+                                </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric 
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_Ml">
@@ -3622,9 +3622,9 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         type="application/json"
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/parameter_modification_Ml.json"/>
-                                </cdk:Test>                                
+                                </cdk:Test>
                             </cdk:Metric>
-                            <cdk:Metric                            
+                            <cdk:Metric
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_1"
                                 function="checkPlausibility">
                                 <cdk:Test id="plausibility_increase_Mfr">
@@ -3643,7 +3643,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                         method="file"
                                         type="application/json"
                                         content="./documents/implementation/credibility/level_1/plausibility_checks/test_mechanics/parameter_modification_Mfr.json"/>
-                                </cdk:Test>                                
+                                </cdk:Test>
                             </cdk:Metric>
                         </cdk:Evidence>
                     </cdk:Credibility>
@@ -3655,11 +3655,11 @@ As simple datatypes are required for the FMU export, this is implemented using a
                         <cdk:Processing description="run simulations for all given experiments to evaluate convergency">
                             <cdk:ComplexProcessing method="github-action" source="localhorst87/run-openmcx@v0.3.0" id="simulation_run_convergency check"/>
                             <cdk:Inputs>
-                                <cdk:FunctionArgument 
+                                <cdk:FunctionArgument
                                     name="ssd"
                                     method="path"
                                     content="./documents/implementation/credibility/level_2/convergency/experiments"/>
-                                <cdk:FunctionArgument 
+                                <cdk:FunctionArgument
                                     name="resultDir"
                                     method="path"
                                     content="./documents/implementation/credibility/level_2/convergency/results"/>
@@ -3718,11 +3718,11 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                 packageUri="./Credibility-Assessment-Framework/Credibility-Development-Kit/metrics/implementation/level_2"
                                 function="checkConvergency">
                                 <cdk:Test id="convergency check of rotational velocity">
-                                    <cdk:FunctionArgument 
+                                    <cdk:FunctionArgument
                                         name="signalName"
                                         method="inline"
                                         content="w" />
-                                    <cdk:FunctionArgument 
+                                    <cdk:FunctionArgument
                                         name="nSamples"
                                         method="inline"
                                         content="3" />
@@ -3780,7 +3780,7 @@ As simple datatypes are required for the FMU export, this is implemented using a
                                     name="p"
                                     method="inline"
                                     content="2" />
-                                <cdk:FunctionArgument 
+                                <cdk:FunctionArgument
                                     name="errorThresholdPercentage"
                                     method="inline"
                                     content="5" />
@@ -9737,10 +9737,10 @@ As simple datatypes are required for the FMU export, this is implemented using a
                             <cdk:Processing description="concatenate all simulation EDFs to one array (preparation for input to createPBoxes)">
                                 <cdk:ComplexProcessing method="nodejs" source="./documents/evaluation/credibility/level_3/concatEDFs.js" />
                                 <cdk:Inputs>
-                                    <cdk:CommandLineArgument 
+                                    <cdk:CommandLineArgument
                                         flag="-o"
                                         type="path"
-                                        argument="./documents/evaluation/credibility/level_3/data/uq_res/edfs.json"/> 
+                                        argument="./documents/evaluation/credibility/level_3/data/uq_res/edfs.json"/>
                                 </cdk:Inputs>
                             </cdk:Processing>
                             <cdk:Processing description="create EDF from measurements">
